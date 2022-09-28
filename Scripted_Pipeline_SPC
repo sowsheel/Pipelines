@@ -1,0 +1,6 @@
+node('SPC') {
+    stage('Clone and run spring pet clinic') {
+        git branch: 'main', url:'https://github.com/spring-projects/spring-petclinic.git'
+        sh "mvn package"
+    }
+}
